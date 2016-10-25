@@ -42,7 +42,7 @@
 
   generateModule('intercom', {
     default: function() {
-      if (window.Intercom && typeof window.Intercom === 'function') {
+      if (window.Intercom && typeof window.Intercom.apply === 'function') {
         return window.Intercom.apply(null, arguments);
       }
     },
